@@ -48,6 +48,14 @@ $ sudo service jenkins stop
 $ sudo service jenkins start
 
 
+Maven
+
+sudo apt update
+sudo apt install maven -y
+mvn -version
+
+
+
 -----------
 
 Default Jenkins Plugins installed on Runtime 
