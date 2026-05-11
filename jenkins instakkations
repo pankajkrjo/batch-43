@@ -55,6 +55,11 @@ sudo apt install maven -y
 mvn -version
 
 
+---GCP---
+ gcloud compute instances list
+gcloud compute ssh cicd
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
 
 -----------
 
