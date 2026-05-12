@@ -136,6 +136,12 @@ docker push
 docker pull
 
 
+Container to docker image pull how
+docker run -it -d ubuntu
+docker ps
+docker commit 7ddeae2697fb newimages(new Image name)
+
+
 -----------
 
 Default Jenkins Plugins installed on Runtime 
