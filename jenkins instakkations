@@ -1,5 +1,11 @@
 9 11 17 23  27 28 30
 
+
+---GCP---
+ gcloud compute instances list
+gcloud compute ssh cicd
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
 Approach 4 :- Install Jenkins On Ubuntu    (this is production / real time approach)
 
 This installation is specific to systems operating on Ubuntu.   Follow the below steps:  https://www.jenkins.io/doc/book/installing/linux/ 
@@ -70,10 +76,24 @@ docker -v
 sudo docker run hello-world
 
 
----GCP---
- gcloud compute instances list
-gcloud compute ssh cicd
-sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+If you actually want Nginx server to start inside container:
+
+FROM ubuntu:latest
+MAINTAINER pankaj@gmail.com
+RUN apt update && \
+apt install nginx -y
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+
+✅ Build Docker Image
+
+docker build -t mynginx .
+
+✅ Run Container
+docker run -d -p 80:80 mynginx
+
+✅ Verify Running Containers
+docker ps
 
 
 -----------
