@@ -95,6 +95,46 @@ docker run -d -p 80:80 mynginx
 ✅ Verify Running Containers
 docker ps
 
+🚀 Login Command
+docker login
+Username:
+Password:
+Enter your:
+
+Docker Hub username
+Docker Hub password
+
+OR Personal Access Token (recommended)
+
+Create Docker Hub Account
+
+If you don't have account:
+Push Docker Image Example
+Step 1 — Tag Image
+docker tag mynginx pankajkrjo/mynginx:v1
+Step 2 — Push Image
+docker push pankajkrjo/mynginx:v1
+
+❌ Permission denied
+Use sudo:
+sudo docker login
+
+🔐 Better Security (Recommended)
+Instead of password, use Docker Hub Access Token.
+Create token from:
+Docker Hub Security Settings
+Then login:
+docker login -u YOUR_USERNAME
+Paste token as password.
+🎯 Final Answer
+Use:
+docker login
+
+Then enter Docker Hub credentials. After login you can:
+
+docker push
+docker pull
+
 
 -----------
 
