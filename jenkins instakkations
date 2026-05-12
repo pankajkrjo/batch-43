@@ -55,6 +55,21 @@ sudo apt install maven -y
 mvn -version
 
 
+Docker
+✅ Step 1 — Update Packages
+sudo apt update
+✅ Step 2 — Install Docker
+sudo apt install docker.io -y
+✅ Step 3 — Start Docker
+sudo systemctl start docker
+✅ Step 4 — Enable Docker on Boot
+sudo systemctl enable docker
+✅ Step 5 — Verify Installation
+docker -v
+✅ Step 6 — Test Docker
+sudo docker run hello-world
+
+
 ---GCP---
  gcloud compute instances list
 gcloud compute ssh cicd
